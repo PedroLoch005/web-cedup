@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+<title>Formulário de escolha de cardápio</title>
+</head>
+
+<body>
+	<h1>Formulário de escolha de cardápio</h1>
+
+<form> 
+	
+  <!-- Nome do cliente -->
+      <form action="processar_pedido.php" method="POST">
+        <h2>Informações do Cliente:</h2>
+        <label for="nome">Nome:</label>
+        <input name = "nome" type = "text" placeholder = "Nome Completo"<required></input><br>
+
+
+<!-- Numero de pessoas para mesa -->
+  <label for="numero_pessoas">Número de Pessoas:</label>
+        <input number_pes = "numero_pessoas" type="text" placeholder="Quantas Pessoas?" min="1" required><br><br>
+        
+  <label for="horario">Selecione o Horário:</label>
+ <select id="horario" name="horario" required>
+  <option value="">Selecione</option>
+  <option value="almoço">Almoço</option>
+  <option value="jantar">Jantar</option></select><br><br>
+        
+<!-- Prefêrencias diéticas do cliente -->
+        
+<h2>Preferências Dietéticas:</h2>
+        
+        <input type="checkbox" id="sem_gluten" name="preferencias[]" value="sem_gluten">
+        <label for="sem_gluten">Sem Glúten</label><br>
+        
+        <input type="checkbox" id="sem_lactose" name="preferencias[]" value="sem_lactose">
+        <label for="sem_lactose">Sem Lactose</label><br>
+        
+        <input type="checkbox" id="para_vegetariano" name="preferencias[]" value="para_vegetariano">
+        <label for="para_vegetariano">Vegetariano</label><br>
+        
+        <input type="checkbox" id="para_vegano" 
+name="preferencias[]" 
+value="para_vegano">
+        <label for="para_vegetariano">Vegano</label><br><br>
+
+        
+<!--Cliente seleciona a entrada -->
+        
+<h2>Entradas:</h2>
+        <select id="entradas" name="entradas" multiple size="3" required>
+            <option value="bolinho_macaxeira">Bolinho de Macaxeira</option>
+            <option value="bruscheta">Bruscheta</option>
+            <option value="salada">Salada</option>
+        </select><br><br>
+        
+<!--Cliente seleciona a entrada -->
+        
+<h2>Pratos Principais:</h2>
+        <select id="prato" name="prato" multiple size="4" required>
+            <option value="file_carne">Filé Mignon ao molho de Mostarda</option>
+            <option value="risoto">Risoto de frutos do mar</option>
+            <option value="feijoada">Feijoada</option>
+            <option value="xinxim">Xinxim de Galinha</option>
+        </select><br><br>
+        
+<h2>Acompanhamentos:</h2>
+        <select id="acompanha" name="acompanha" multiple size="3" required>
+            <option value="batata">Purê de batata</option>
+            <option value="arroz">Arroz</option>
+            <option value="legumes">Legumes</option>
+        </select><br><br>
+        
+        
+<h2>Bebidas:</h2>
+        <select id="bebida" name="bebida" multiple size="3" required>
+            <option value="vinho">Vinho</option>
+            <option value="agua">Água</option>
+            <option value="refri">Refrigerante</option>
+        </select><br><br>
+        
+<h2>Sobremesa:</h2>
+        <select id="sobremesa" name="sobremesa" multiple size="3" required>
+            <option value="sorvete">Sorvete</option>
+            <option value="petit">Petit Gateau</option>
+            <option value="gelatina">Gelatina</option>
+        </select><br><br>
+        
+<!-- Enviar o pedido -->
+<input type="submit" value="Enviar Pedido">
+    </form>
+</body>
+</html>
